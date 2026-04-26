@@ -3,564 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PivotLab — Your career pivot starts here</title>
+<title>PivotLab - Your career pivot starts here</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --cream: #faf9f7;
-  --black: #000000;
-  --white: #ffffff;
-  --silver: #9f9b93;
-  --charcoal: #55534e;
-  --oat: #dad4c8;
-  --oat-light: #eee9df;
-  --matcha-300: #84e7a5;
-  --matcha-600: #078a52;
-  --matcha-800: #02492a;
-  --slushie-500: #3bd3fd;
-  --slushie-800: #0089ad;
-  --lemon-400: #f8cc65;
-  --lemon-500: #fbbd41;
-  --lemon-700: #d08a11;
-  --ube-300: #c1b0ff;
-  --ube-800: #43089f;
-  --ube-900: #32037d;
-  --pom-400: #fc7981;
-  --shadow-clay: rgba(0,0,0,0.1) 0px 1px 1px, rgba(0,0,0,0.04) 0px -1px 1px inset, rgba(0,0,0,0.05) 0px -0.5px 1px;
-  --mono: 'Space Mono', monospace;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Arial', sans-serif;
-  background: var(--cream);
-  color: var(--black);
-  font-size: 16px;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  background: rgba(250,249,247,0.9);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--oat);
-  height: 60px;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 40px;
-}
-
-.nav-logo {
-  font-size: 20px; font-weight: 700; letter-spacing: -0.5px;
-  color: var(--black); text-decoration: none;
-  display: flex; align-items: center; gap: 6px;
-}
-
-.nav-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lemon-500); display: inline-block; }
-
-.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
-
-.nav-links a {
-  font-size: 15px; font-weight: 500; color: var(--charcoal);
-  text-decoration: none; transition: color 0.15s;
-}
-.nav-links a:hover { color: var(--black); }
-
-.nav-cta {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--black); color: var(--white);
-  font-size: 15px; font-weight: 600; letter-spacing: -0.2px;
-  padding: 8px 20px; border-radius: 1584px; text-decoration: none;
-  transition: background 0.15s, transform 0.2s, box-shadow 0.2s;
-}
-.nav-cta:hover { background: var(--ube-800); transform: rotateZ(-8deg) translateY(-4px); box-shadow: rgb(0,0,0) -5px 5px; }
-
-/* HERO */
-.hero { padding: 120px 40px 80px; max-width: 1100px; margin: 0 auto; }
-
-.hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 32px; }
-
-.hero-badge {
-  background: var(--lemon-400); color: var(--black);
-  font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
-  padding: 5px 14px; border-radius: 11px;
-}
-
-.hero-badge-outline {
-  border: 1px dashed var(--oat); color: var(--silver);
-  font-size: 12px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase;
-  padding: 5px 14px; border-radius: 11px;
-}
-
-h1 {
-  font-size: clamp(52px, 6.5vw, 80px); font-weight: 700;
-  line-height: 1.0; letter-spacing: -3px; color: var(--black);
-  margin-bottom: 28px; max-width: 820px;
-}
-
-.hl-lemon { background: var(--lemon-400); padding: 0 8px; border-radius: 8px; }
-.hl-matcha { background: var(--matcha-300); padding: 0 8px; border-radius: 8px; }
-.hl-ube { background: var(--ube-300); padding: 0 8px; border-radius: 8px; }
-
-.hero-sub {
-  font-size: 20px; font-weight: 400; line-height: 1.5;
-  color: var(--silver); max-width: 540px; margin-bottom: 40px;
-}
-
-.hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 56px; }
-
-.btn-black {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--black); color: var(--white);
-  font-size: 16px; font-weight: 600; letter-spacing: -0.2px;
-  padding: 14px 28px; border-radius: 1584px; text-decoration: none;
-  transition: background 0.15s, transform 0.2s, box-shadow 0.2s;
-}
-.btn-black:hover { background: var(--matcha-600); transform: rotateZ(-8deg) translateY(-6px); box-shadow: rgb(0,0,0) -7px 7px; }
-
-.btn-ghost {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: transparent; color: var(--black);
-  font-size: 16px; font-weight: 600;
-  padding: 14px 28px; border-radius: 1584px; border: 1px solid var(--oat);
-  text-decoration: none;
-  transition: background 0.15s, transform 0.2s, box-shadow 0.2s, border-color 0.15s;
-}
-.btn-ghost:hover { background: var(--lemon-400); border-color: var(--lemon-400); transform: rotateZ(-8deg) translateY(-6px); box-shadow: rgb(0,0,0) -7px 7px; }
-
-.hero-stats {
-  display: flex; gap: 0;
-  border: 1px solid var(--oat); border-radius: 24px; overflow: hidden;
-  background: var(--white); box-shadow: var(--shadow-clay); max-width: 560px;
-}
-
-.stat-block { flex: 1; padding: 24px 28px; border-right: 1px solid var(--oat); }
-.stat-block:last-child { border-right: none; }
-
-.stat-num {
-  font-family: var(--mono); font-size: 28px; font-weight: 700;
-  color: var(--black); line-height: 1.1; margin-bottom: 4px;
-}
-
-.stat-label { font-size: 13px; color: var(--silver); }
-
-/* TICKER */
-.ticker-strip { background: var(--black); padding: 14px 0; overflow: hidden; white-space: nowrap; }
-
-.ticker-track {
-  display: inline-flex; gap: 36px;
-  animation: ticker 30s linear infinite;
-}
-
-@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-.ticker-item {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.5); flex-shrink: 0;
-}
-
-.tdot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
-.tdot-y { background: var(--lemon-500); }
-.tdot-g { background: var(--matcha-300); }
-.tdot-b { background: var(--slushie-500); }
-.tdot-p { background: var(--ube-300); }
-.tdot-r { background: var(--pom-400); }
-
-/* PROBLEM */
-.problem-wrap { margin: 48px 40px; }
-
-.problem-section {
-  background: var(--ube-900); border-radius: 40px; padding: 80px 64px;
-}
-
-.label {
-  display: block; font-size: 12px; font-weight: 700;
-  letter-spacing: 1.08px; text-transform: uppercase;
-  color: var(--silver); margin-bottom: 20px;
-}
-
-.problem-section .label { color: var(--ube-300); }
-
-.problem-section h2 {
-  font-size: clamp(36px, 4vw, 56px); font-weight: 700;
-  letter-spacing: -1.8px; line-height: 1.05;
-  color: var(--white); margin-bottom: 16px;
-}
-
-.problem-lead {
-  font-size: 18px; color: rgba(255,255,255,0.5);
-  max-width: 520px; line-height: 1.6; margin-bottom: 56px;
-}
-
-.problem-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-
-.problem-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 24px; padding: 36px 32px;
-}
-
-.problem-stat {
-  font-family: var(--mono); font-size: 48px; font-weight: 700;
-  color: var(--ube-300); line-height: 1; margin-bottom: 16px;
-}
-
-.problem-card p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.65; }
-
-/* HOW IT WORKS */
-.how-section { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
-
-.how-section h2 {
-  font-size: clamp(36px, 4vw, 52px); font-weight: 700;
-  letter-spacing: -1.5px; line-height: 1.05;
-  color: var(--black); margin-bottom: 56px; max-width: 520px;
-}
-
-.steps-list { display: flex; flex-direction: column; }
-
-.step-item {
-  display: grid; grid-template-columns: 72px 1fr; gap: 32px;
-  padding: 36px 0; border-top: 1px solid var(--oat); align-items: start;
-  transition: background 0.15s;
-}
-.step-item:last-child { border-bottom: 1px solid var(--oat); }
-
-.step-num-col { display: flex; flex-direction: column; align-items: center; gap: 8px; padding-top: 4px; }
-
-.step-num-label { font-family: var(--mono); font-size: 12px; color: var(--silver); }
-
-.step-pip { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--oat); background: var(--cream); transition: background 0.2s, border-color 0.2s; }
-.step-item:hover .step-pip { background: var(--lemon-500); border-color: var(--lemon-500); }
-
-.step-title {
-  font-size: 22px; font-weight: 700; letter-spacing: -0.4px;
-  color: var(--black); margin-bottom: 10px;
-}
-
-.step-desc {
-  font-size: 16px; color: var(--charcoal); line-height: 1.65;
-  max-width: 580px; margin-bottom: 16px;
-}
-
-.chips { display: flex; gap: 8px; flex-wrap: wrap; }
-
-.chip {
-  background: var(--white); border: 1px solid var(--oat);
-  color: var(--charcoal); font-size: 13px;
-  padding: 4px 12px; border-radius: 1584px;
-  box-shadow: var(--shadow-clay);
-}
-
-/* PILLARS */
-.pillars-wrap { margin: 0 40px 48px; }
-
-.pillars-section {
-  background: var(--matcha-800); border-radius: 40px; padding: 80px 64px;
-}
-
-.pillars-section .label { color: var(--matcha-300); }
-
-.pillars-section h2 {
-  font-size: clamp(36px, 4vw, 52px); font-weight: 700;
-  letter-spacing: -1.5px; line-height: 1.05;
-  color: var(--white); margin-bottom: 56px; max-width: 520px;
-}
-
-.pillars-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-
-.pillar-card {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 24px; padding: 32px 28px;
-  transition: background 0.2s, transform 0.2s;
-}
-.pillar-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
-
-.pillar-icon {
-  width: 44px; height: 44px; border-radius: 12px;
-  background: rgba(132,231,165,0.15);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px; margin-bottom: 20px;
-}
-
-.pillar-title {
-  font-size: 17px; font-weight: 700; letter-spacing: -0.3px;
-  color: var(--white); margin-bottom: 10px;
-}
-
-.pillar-desc { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.65; }
-
-/* PERSONAS */
-.personas-section { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
-
-.personas-section h2 {
-  font-size: clamp(36px, 4vw, 52px); font-weight: 700;
-  letter-spacing: -1.5px; line-height: 1.05;
-  color: var(--black); margin-bottom: 56px; max-width: 580px;
-}
-
-.persona-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-
-.persona-card {
-  background: var(--white); border: 1px solid var(--oat);
-  border-radius: 24px; overflow: hidden;
-  box-shadow: var(--shadow-clay); transition: transform 0.2s;
-}
-.persona-card:hover { transform: translateY(-4px); }
-
-.persona-header { padding: 28px 28px 20px; border-bottom: 1px solid var(--oat-light); }
-
-.persona-avatar {
-  width: 48px; height: 48px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; font-weight: 700; color: var(--black); margin-bottom: 14px;
-}
-.pa-y { background: var(--lemon-400); }
-.pa-g { background: var(--matcha-300); }
-.pa-b { background: var(--slushie-500); }
-
-.persona-name { font-size: 16px; font-weight: 700; color: var(--black); margin-bottom: 3px; }
-.persona-role { font-size: 13px; color: var(--silver); }
-
-.persona-body { padding: 24px 28px; }
-
-.persona-quote {
-  font-size: 14px; color: var(--charcoal); line-height: 1.7;
-  font-style: italic; margin-bottom: 18px;
-  border-left: 2px solid var(--oat); padding-left: 14px;
-}
-
-.ptags { display: flex; flex-wrap: wrap; gap: 6px; }
-
-.ptag {
-  background: var(--cream); border: 1px solid var(--oat);
-  color: var(--charcoal); font-size: 12px;
-  padding: 3px 10px; border-radius: 1584px;
-}
-
-/* PARTNERS */
-.partners-strip {
-  padding: 56px 40px; text-align: center;
-  border-top: 1px solid var(--oat); border-bottom: 1px solid var(--oat);
-}
-
-.partners-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
-
-.partner-tag {
-  background: var(--white); border: 1px solid var(--oat);
-  color: var(--charcoal); font-size: 14px; font-weight: 500;
-  padding: 10px 20px; border-radius: 1584px;
-  box-shadow: var(--shadow-clay);
-}
-
-/* FINANCIAL */
-.financial-wrap { margin: 0 40px 48px; }
-
-.financial-section {
-  background: var(--lemon-500); border-radius: 40px; padding: 80px 64px;
-}
-
-.financial-section .label { color: var(--lemon-700); }
-
-.financial-section h2 {
-  font-size: clamp(36px, 4vw, 52px); font-weight: 700;
-  letter-spacing: -1.5px; line-height: 1.05;
-  color: var(--black); max-width: 560px;
-}
-
-.fin-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; margin-top: 48px; }
-
-.fin-lead { font-size: 18px; color: rgba(0,0,0,0.55); line-height: 1.6; margin-bottom: 28px; }
-
-.fin-options { display: flex; flex-direction: column; gap: 10px; }
-
-.fin-option {
-  background: rgba(255,255,255,0.5); border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 16px; padding: 16px 18px;
-  display: flex; gap: 14px; align-items: flex-start;
-}
-
-.fin-icon {
-  width: 36px; height: 36px; border-radius: 8px;
-  background: rgba(255,255,255,0.7); border: 1px solid rgba(0,0,0,0.08);
-  flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 16px;
-}
-
-.fin-title { font-size: 14px; font-weight: 700; color: var(--black); margin-bottom: 3px; }
-.fin-desc { font-size: 13px; color: rgba(0,0,0,0.5); line-height: 1.5; }
-
-.fin-card {
-  background: var(--white); border: 1px solid var(--oat);
-  border-radius: 24px; padding: 32px;
-  box-shadow: var(--shadow-clay);
-}
-
-.fin-card-title {
-  font-size: 12px; font-weight: 700; letter-spacing: 1.08px;
-  text-transform: uppercase; color: var(--silver); margin-bottom: 24px;
-}
-
-.cost-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 11px 0; border-bottom: 1px dashed var(--oat);
-}
-.cost-row:last-of-type { border-bottom: none; }
-.cost-item { font-size: 14px; color: var(--charcoal); }
-.cost-val { font-size: 15px; font-weight: 700; color: var(--black); }
-.cost-val.strike { text-decoration: line-through; color: var(--silver); font-weight: 400; }
-.cost-val.good { color: var(--matcha-600); }
-
-.cost-total {
-  margin-top: 18px; background: var(--matcha-300);
-  border-radius: 12px; padding: 16px 20px;
-  display: flex; justify-content: space-between; align-items: center;
-}
-.cost-total-label { font-size: 14px; font-weight: 700; color: var(--matcha-800); }
-.cost-total-val { font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--matcha-800); }
-
-/* TESTIMONIALS */
-.testi-section { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
-
-.testi-section h2 {
-  font-size: clamp(36px, 4vw, 52px); font-weight: 700;
-  letter-spacing: -1.5px; line-height: 1.05;
-  color: var(--black); margin-bottom: 56px; max-width: 520px;
-}
-
-.testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-
-.testi-card {
-  background: var(--white); border: 1px solid var(--oat);
-  border-radius: 24px; padding: 32px 28px;
-  box-shadow: var(--shadow-clay); transition: transform 0.2s;
-}
-.testi-card:hover { transform: translateY(-4px); }
-
-.testi-mark { font-family: var(--mono); font-size: 36px; color: var(--oat); line-height: 1; margin-bottom: 14px; }
-
-.testi-text {
-  font-size: 15px; color: var(--charcoal); line-height: 1.7;
-  font-style: italic; margin-bottom: 24px;
-}
-
-.testi-person { display: flex; align-items: center; gap: 12px; }
-
-.testi-avatar {
-  width: 36px; height: 36px; border-radius: 50%;
-  font-size: 13px; font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.ta-y { background: var(--lemon-400); color: var(--black); }
-.ta-g { background: var(--matcha-300); color: var(--black); }
-.ta-b { background: var(--slushie-500); color: var(--black); }
-
-.testi-name { font-size: 14px; font-weight: 700; color: var(--black); }
-.testi-role { font-size: 12px; color: var(--silver); margin-top: 2px; }
-
-/* CTA */
-.cta-wrap { margin: 0 40px 48px; }
-
-.cta-section {
-  background: var(--slushie-800); border-radius: 40px; padding: 96px 64px; text-align: center;
-}
-
-.cta-section .label { color: var(--slushie-500); }
-
-.cta-section h2 {
-  font-size: clamp(40px, 5vw, 64px); font-weight: 700;
-  letter-spacing: -2px; line-height: 1.0;
-  color: var(--white); margin-bottom: 20px;
-}
-
-.cta-sub {
-  font-size: 18px; color: rgba(255,255,255,0.55);
-  max-width: 460px; margin: 0 auto 40px; line-height: 1.6;
-}
-
-.btn-white {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--white); color: var(--black);
-  font-size: 18px; font-weight: 700;
-  padding: 16px 36px; border-radius: 1584px; text-decoration: none;
-  transition: background 0.15s, transform 0.2s, box-shadow 0.2s;
-}
-.btn-white:hover { background: var(--lemon-400); transform: rotateZ(-8deg) translateY(-8px); box-shadow: rgb(0,0,0) -7px 7px; }
-
-/* FOOTER */
-footer { background: var(--white); border-top: 1px solid var(--oat); padding: 48px 40px 40px; }
-
-.footer-inner {
-  background: var(--cream); border: 1px solid var(--oat);
-  border-radius: 40px; padding: 56px 56px 40px;
-}
-
-.footer-top {
-  display: grid; grid-template-columns: 1fr auto; gap: 64px;
-  align-items: start; margin-bottom: 48px;
-}
-
-.footer-logo {
-  font-size: 22px; font-weight: 700; color: var(--black);
-  display: flex; align-items: center; gap: 6px; margin-bottom: 10px;
-}
-
-.footer-tagline { font-size: 14px; color: var(--silver); max-width: 220px; line-height: 1.5; }
-
-.footer-cols { display: flex; gap: 52px; flex-wrap: wrap; }
-
-.footer-col-head {
-  font-size: 12px; font-weight: 700; letter-spacing: 1.08px;
-  text-transform: uppercase; color: var(--silver); margin-bottom: 14px;
-}
-
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-
-.footer-col a {
-  text-decoration: none; color: var(--charcoal); font-size: 15px; transition: color 0.15s;
-}
-.footer-col a:hover { color: var(--black); }
-
-.footer-bottom {
-  border-top: 1px solid var(--oat); padding-top: 24px;
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 12px;
-}
-
-.footer-copy { font-size: 13px; color: var(--silver); }
-.footer-legal { display: flex; gap: 20px; }
-.footer-legal a { font-size: 13px; color: var(--silver); text-decoration: none; transition: color 0.15s; }
-.footer-legal a:hover { color: var(--black); }
-
-/* ANIMATIONS */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-.hero-eyebrow { animation: fadeUp 0.5s ease 0.1s both; }
-h1 { animation: fadeUp 0.5s ease 0.2s both; }
-.hero-sub { animation: fadeUp 0.5s ease 0.3s both; }
-.hero-actions { animation: fadeUp 0.5s ease 0.4s both; }
-.hero-stats { animation: fadeUp 0.5s ease 0.5s both; }
-
-/* RESPONSIVE */
-@media (max-width: 960px) {
-  nav { padding: 0 20px; }
-  .nav-links { display: none; }
-  .hero { padding: 96px 20px 60px; }
-  .problem-wrap, .pillars-wrap, .financial-wrap, .cta-wrap { margin: 24px 16px; }
-  .problem-section, .pillars-section, .financial-section, .cta-section { padding: 56px 28px; }
-  .problem-grid, .pillars-grid, .persona-grid, .testi-grid { grid-template-columns: 1fr; }
-  .fin-layout { grid-template-columns: 1fr; gap: 32px; }
-  .how-section, .personas-section, .testi-section { padding: 60px 20px; }
-  .footer-inner { padding: 40px 28px 32px; }
-  .footer-top { grid-template-columns: 1fr; gap: 32px; }
-  .footer-cols { gap: 32px; }
-  .partners-strip { padding: 48px 20px; }
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -578,19 +24,41 @@ h1 { animation: fadeUp 0.5s ease 0.2s both; }
 
 <!-- HERO -->
 <section class="hero">
+
+  <!-- Hero decorative blob -->
+  <svg class="hero-svg-bg" width="520" height="520" viewBox="0 0 520 520" fill="none" aria-hidden="true">
+    <ellipse cx="340" cy="210" rx="280" ry="250" fill="#fbbd41" opacity="0.09" transform="rotate(-16 340 210)"/>
+    <ellipse cx="290" cy="340" rx="200" ry="165" fill="#c1b0ff" opacity="0.07" transform="rotate(10 290 340)"/>
+    <ellipse cx="400" cy="120" rx="100" ry="90" fill="#84e7a5" opacity="0.06" transform="rotate(-5 400 120)"/>
+    <!-- dot grid 5x5 -->
+    <g fill="#dad4c8" opacity="0.6">
+      <circle cx="48" cy="48" r="2.5"/><circle cx="80" cy="48" r="2.5"/><circle cx="112" cy="48" r="2.5"/><circle cx="144" cy="48" r="2.5"/><circle cx="176" cy="48" r="2.5"/>
+      <circle cx="48" cy="80" r="2.5"/><circle cx="80" cy="80" r="2.5"/><circle cx="112" cy="80" r="2.5"/><circle cx="144" cy="80" r="2.5"/><circle cx="176" cy="80" r="2.5"/>
+      <circle cx="48" cy="112" r="2.5"/><circle cx="80" cy="112" r="2.5"/><circle cx="112" cy="112" r="2.5"/><circle cx="144" cy="112" r="2.5"/><circle cx="176" cy="112" r="2.5"/>
+      <circle cx="48" cy="144" r="2.5"/><circle cx="80" cy="144" r="2.5"/><circle cx="112" cy="144" r="2.5"/><circle cx="144" cy="144" r="2.5"/><circle cx="176" cy="144" r="2.5"/>
+      <circle cx="48" cy="176" r="2.5"/><circle cx="80" cy="176" r="2.5"/><circle cx="112" cy="176" r="2.5"/><circle cx="144" cy="176" r="2.5"/><circle cx="176" cy="176" r="2.5"/>
+    </g>
+    <!-- career path arc -->
+    <path d="M 60 420 Q 180 320 280 240 Q 360 180 460 100" stroke="#dad4c8" stroke-width="1.5" stroke-dasharray="6 8" fill="none" opacity="0.5"/>
+    <circle cx="460" cy="100" r="5" fill="#fbbd41" opacity="0.5"/>
+    <circle cx="280" cy="240" r="4" fill="#84e7a5" opacity="0.5"/>
+    <circle cx="60" cy="420" r="4" fill="#c1b0ff" opacity="0.5"/>
+  </svg>
+
+  <div class="hero-content">
   <div class="hero-eyebrow">
-    <span class="hero-badge">Australia's career pivot platform</span>
-    <span class="hero-badge-outline">pivotlab.com.au</span>
+    <span class="hero-badge">Pivot to data careers</span>
+    <span class="hero-badge-outline">Data Analyst • Data Engineer • Data Scientist</span>
   </div>
-  <h1>Your next career.<br><span class="hl-matcha">Fully supported.</span><br>No excuses left.</h1>
-  <p class="hero-sub">Credible educators, industry-backed curriculum, a cohort who gets it, and financial pathways that remove the last excuse. PivotLab was built so time and money stop being the reason you stay stuck.</p>
+  <h1>Launch your data career.<br><span class="hl-matcha">Fully supported.</span><br>No excuses left.</h1>
+  <p class="hero-sub">Transition into high-demand data roles (Data Analyst, Data Engineer, Data Scientist) with credible educators, industry-backed curriculum, a cohort who gets it, and financial pathways that remove the last excuse. PivotLab was built so time and money stop being the reason you stay stuck.</p>
   <div class="hero-actions">
     <a href="#cta" class="btn-black">Start your pivot &rarr;</a>
     <a href="#how" class="btn-ghost">See how it works</a>
   </div>
   <div class="hero-stats">
     <div class="stat-block">
-      <div class="stat-num">8 wks</div>
+      <div class="stat-num">16 wks</div>
       <div class="stat-label">To job-ready</div>
     </div>
     <div class="stat-block">
@@ -602,52 +70,62 @@ h1 { animation: fadeUp 0.5s ease 0.2s both; }
       <div class="stat-label">Industry educators</div>
     </div>
   </div>
+  </div><!-- /.hero-content -->
 </section>
 
 <!-- TICKER -->
 <div class="ticker-strip">
   <div class="ticker-track">
-    <span class="ticker-item"><span class="tdot tdot-y"></span>University-backed curriculum</span>
-    <span class="ticker-item"><span class="tdot tdot-g"></span>Cohort community</span>
-    <span class="ticker-item"><span class="tdot tdot-b"></span>Income Share Agreements</span>
-    <span class="ticker-item"><span class="tdot tdot-p"></span>Industry educators</span>
-    <span class="ticker-item"><span class="tdot tdot-r"></span>Near-peer mentors</span>
-    <span class="ticker-item"><span class="tdot tdot-y"></span>Employer connections</span>
-    <span class="ticker-item"><span class="tdot tdot-g"></span>Financial scholarships</span>
-    <span class="ticker-item"><span class="tdot tdot-b"></span>Flexible schedule</span>
-    <span class="ticker-item"><span class="tdot tdot-p"></span>Alumni network</span>
-    <span class="ticker-item"><span class="tdot tdot-r"></span>Safe learning environment</span>
-    <span class="ticker-item"><span class="tdot tdot-y"></span>University-backed curriculum</span>
-    <span class="ticker-item"><span class="tdot tdot-g"></span>Cohort community</span>
-    <span class="ticker-item"><span class="tdot tdot-b"></span>Income Share Agreements</span>
-    <span class="ticker-item"><span class="tdot tdot-p"></span>Industry educators</span>
-    <span class="ticker-item"><span class="tdot tdot-r"></span>Near-peer mentors</span>
-    <span class="ticker-item"><span class="tdot tdot-y"></span>Employer connections</span>
-    <span class="ticker-item"><span class="tdot tdot-g"></span>Financial scholarships</span>
-    <span class="ticker-item"><span class="tdot tdot-b"></span>Flexible schedule</span>
-    <span class="ticker-item"><span class="tdot tdot-p"></span>Alumni network</span>
-    <span class="ticker-item"><span class="tdot tdot-r"></span>Safe learning environment</span>
+    <span class="ticker-item"><span class="tdot tdot-y"></span>Data analytics curriculum</span>
+    <span class="ticker-item"><span class="tdot tdot-g"></span>SQL • Python • Tableau skills</span>
+    <span class="ticker-item"><span class="tdot tdot-b"></span>Real datasets & projects</span>
+    <span class="ticker-item"><span class="tdot tdot-p"></span>Data industry mentors</span>
+    <span class="ticker-item"><span class="tdot tdot-r"></span>Hire-ready portfolio</span>
+    <span class="ticker-item"><span class="tdot tdot-y"></span>Data engineer pathways</span>
+    <span class="ticker-item"><span class="tdot tdot-g"></span>Income Share Agreements</span>
+    <span class="ticker-item"><span class="tdot tdot-b"></span>Tech stack preparation</span>
+    <span class="ticker-item"><span class="tdot tdot-p"></span>Data jobs network</span>
+    <span class="ticker-item"><span class="tdot tdot-r"></span>Flexible learning schedule</span>
+    <span class="ticker-item"><span class="tdot tdot-y"></span>Data analytics curriculum</span>
+    <span class="ticker-item"><span class="tdot tdot-g"></span>SQL • Python • Tableau skills</span>
+    <span class="ticker-item"><span class="tdot tdot-b"></span>Real datasets & projects</span>
+    <span class="ticker-item"><span class="tdot tdot-p"></span>Data industry mentors</span>
+    <span class="ticker-item"><span class="tdot tdot-r"></span>Hire-ready portfolio</span>
+    <span class="ticker-item"><span class="tdot tdot-y"></span>Data engineer pathways</span>
+    <span class="ticker-item"><span class="tdot tdot-g"></span>Income Share Agreements</span>
+    <span class="ticker-item"><span class="tdot tdot-b"></span>Tech stack preparation</span>
+    <span class="ticker-item"><span class="tdot tdot-p"></span>Data jobs network</span>
+    <span class="ticker-item"><span class="tdot tdot-r"></span>Flexible learning schedule</span>
   </div>
 </div>
 
 <!-- PROBLEM -->
 <div class="problem-wrap">
   <div class="problem-section">
-    <span class="label">The real barrier</span>
-    <h2>Career change is <span class="hl-ube">broken</span><br>for most people</h2>
-    <p class="problem-lead">The existing options were not designed for you. Generic platforms assume a technical starting point, price out anyone with constraints, and leave you isolated when it gets hard.</p>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <div class="problem-stat">73%</div>
-        <p>Of career changers abandon within 3 months. Not because they lacked ability, but because they lacked structured support and couldn't afford the time.</p>
-      </div>
-      <div class="problem-card">
-        <div class="problem-stat">$8k+</div>
-        <p>Average cost of bootcamps not built for non-technical beginners, leading to wasted money and confidence-crushing failure cycles.</p>
-      </div>
-      <div class="problem-card">
+    <!-- dot grid texture -->
+    <svg width="100%" height="100%" style="position:absolute;top:0;left:0;pointer-events:none;border-radius:40px;overflow:hidden" aria-hidden="true">
+      <defs>
+        <pattern id="prob-dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1.5" fill="#c1b0ff" opacity="0.35"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#prob-dots)"/>
+    </svg>
+    <span class="label">The real barrier to data careers</span>
+    <h2>Breaking into data is <span class="hl-ube">broken</span><br>for most career changers</h2>
+    <p class="problem-lead">Data careers are high-growth, high-paying, and increasingly in-demand. But the path is confusing. Generic bootcamps assume coding experience, price out anyone with constraints, and leave you isolated when it gets hard. Most don't teach the fundamentals or real-world data workflows.</p>
+    <div class="problem-grid" data-stagger>
+      <div class="problem-card reveal-child">
         <div class="problem-stat">1 in 3</div>
-        <p>Australians want to change careers but cite financial risk and lack of structured support as the primary blockers stopping them from acting.</p>
+        <p>Up to one in three bootcamp graduates remain completely unemployed in their target field six full months after completion. Accelerated courses often fail to build deep expertise, leaving job-seekers stranded in a highly competitive market.</p>
+      </div>
+      <div class="problem-card reveal-child">
+        <div class="problem-stat">$10k–$17k+</div>
+        <p>The true average upfront cost of a data bootcamp. Despite the massive investment, these programs systematically skip critical mathematical and architectural fundamentals, leaving graduates fragile and underprepared for real enterprise data problems.</p>
+      </div>
+      <div class="problem-card reveal-child">
+        <div class="problem-stat" style="font-size: clamp(32px, 3vw, 48px); line-height: 1.1;">The Entry-Level Collapse</div>
+        <p>Pure entry-level tech jobs have collapsed by 73% in the current market. Hiring managers demand professionals who understand system architecture and can drive real business decisions on day one.</p>
       </div>
     </div>
   </div>
@@ -656,38 +134,42 @@ h1 { animation: fadeUp 0.5s ease 0.2s both; }
 <!-- HOW IT WORKS -->
 <section id="how" class="how-section">
   <span class="label">The PivotLab way</span>
-  <h2>From doubt to<br>employed, step by step</h2>
-  <div class="steps-list">
-    <div class="step-item">
+  <h2>From "what's SQL?" to<br>junior data role, step by step</h2>
+  <div class="steps-list" style="position:relative">
+    <!-- vertical connector line behind pips -->
+    <svg class="steps-connector" aria-hidden="true" width="10" height="100%" style="position:absolute;left:35px;top:0;pointer-events:none;z-index:0">
+      <line x1="5" y1="0" x2="5" y2="100%" stroke="#dad4c8" stroke-width="1" stroke-dasharray="4 7"/>
+    </svg>
+    <div class="step-item reveal-left">
       <div class="step-num-col"><span class="step-num-label">01</span><div class="step-pip"></div></div>
       <div>
-        <div class="step-title">Find your fit</div>
-        <p class="step-desc">A short discovery session maps where you are now to where you want to go. No assumptions about your background. We meet you at your level and chart a realistic path into a high-growth industry role.</p>
-        <div class="chips"><span class="chip">Readiness assessment</span><span class="chip">Industry role mapping</span><span class="chip">Career fit session</span></div>
+        <div class="step-title">Find your data fit</div>
+        <p class="step-desc">A discovery session maps your current skills to data career paths. Are you suited for analytics, engineering, or science roles? What's your realistic entry point? We chart a path based on your background, not generic assumptions.</p>
+        <div class="chips"><span class="chip">Skills assessment</span><span class="chip">Data role mapping</span><span class="chip">Realistic timeline</span></div>
       </div>
     </div>
-    <div class="step-item">
+    <div class="step-item reveal-left">
       <div class="step-num-col"><span class="step-num-label">02</span><div class="step-pip"></div></div>
       <div>
-        <div class="step-title">Learn with credible educators</div>
-        <p class="step-desc">Cohort-based learning led by instructors from top Australian universities and national industry organisations. Curriculum is co-designed with employers so what you learn is exactly what the job requires on day one.</p>
-        <div class="chips"><span class="chip">University-backed content</span><span class="chip">Industry instructors</span><span class="chip">Live cohort format</span></div>
+        <div class="step-title">Learn data with industry experts</div>
+        <p class="step-desc">Taught by data practitioners from top Australian companies and universities. Master SQL, Python, analytics tools, and data workflows that hiring managers actually use. Co-designed with employers so day-one skills are exactly what the job demands.</p>
+        <div class="chips"><span class="chip">SQL & Python</span><span class="chip">Real data projects</span><span class="chip">Industry instructors</span></div>
       </div>
     </div>
-    <div class="step-item">
+    <div class="step-item reveal-left">
       <div class="step-num-col"><span class="step-num-label">03</span><div class="step-pip"></div></div>
       <div>
-        <div class="step-title">Grow inside your cohort</div>
-        <p class="step-desc">Your cohort is your team. Peer accountability, shared milestones, and near-peer mentors who made the same switch guide you through the hard parts. You will never do this alone.</p>
-        <div class="chips"><span class="chip">Peer community</span><span class="chip">Near-peer mentors</span><span class="chip">Accountability structures</span></div>
+        <div class="step-title">Build your data portfolio</div>
+        <p class="step-desc">Create real analytics projects and dashboards that show you can handle data work. Your portfolio becomes your proof. You'll have 3+ projects that hiring managers can assess, the difference between theory and demonstrable skill.</p>
+        <div class="chips"><span class="chip">Real datasets</span><span class="chip">Portfolio projects</span><span class="chip">Peer review</span></div>
       </div>
     </div>
-    <div class="step-item">
+    <div class="step-item reveal-left">
       <div class="step-num-col"><span class="step-num-label">04</span><div class="step-pip"></div></div>
       <div>
-        <div class="step-title">Land the role, with support</div>
-        <p class="step-desc">Interview prep, portfolio building, and direct employer connections. We stay with you until you're employed, and the alumni network keeps the door open long after you start your new career.</p>
-        <div class="chips"><span class="chip">Employer connections</span><span class="chip">Interview coaching</span><span class="chip">Alumni network</span></div>
+        <div class="step-title">Land the data role</div>
+        <p class="step-desc">Direct connections to hiring data teams, interview prep specific to data roles, and salary negotiation support. We stay with you until you're hired. The alumni network connects you to the data community long after you start.</p>
+        <div class="chips"><span class="chip">Data company network</span><span class="chip">Interview coaching</span><span class="chip">Alumni data community</span></div>
       </div>
     </div>
   </div>
@@ -696,15 +178,24 @@ h1 { animation: fadeUp 0.5s ease 0.2s both; }
 <!-- PILLARS -->
 <div id="pillars" class="pillars-wrap">
   <div class="pillars-section">
-    <span class="label">Everything you need</span>
-    <h2>Six pillars that remove<br>every <span style="color:var(--matcha-300)">obstacle</span></h2>
-    <div class="pillars-grid">
-      <div class="pillar-card"><div class="pillar-icon">&#127891;</div><div class="pillar-title">Credible education</div><p class="pillar-desc">Instructors from Australia's top universities and national industry bodies. Not anonymous online lecturers. Credentials your employer will recognise.</p></div>
-      <div class="pillar-card"><div class="pillar-icon">&#128101;</div><div class="pillar-title">Cohort community</div><p class="pillar-desc">Live cohorts of 15 to 25 peers who hold each other accountable. Near-peer mentors who made the same switch. You'll never be isolated.</p></div>
-      <div class="pillar-card"><div class="pillar-icon">&#128176;</div><div class="pillar-title">Financial access</div><p class="pillar-desc">ISAs, scholarships, and government-aligned pathways mean financial constraints don't determine who gets to build a new career.</p></div>
-      <div class="pillar-card"><div class="pillar-icon">&#127919;</div><div class="pillar-title">Industry-driven</div><p class="pillar-desc">Every course co-designed with employers. What you learn maps directly to what hiring managers need from you on day one.</p></div>
-      <div class="pillar-card"><div class="pillar-icon">&#128274;</div><div class="pillar-title">Safe environment</div><p class="pillar-desc">Built for newcomers. Ask anything without fear. Confusion is expected and welcomed here, at every stage of your pivot.</p></div>
-      <div class="pillar-card"><div class="pillar-icon">&#9200;</div><div class="pillar-title">Time-flexible</div><p class="pillar-desc">Designed for working parents, people still in jobs, and anyone who can't quit and study full-time. We fit around your life.</p></div>
+    <!-- corner ornament -->
+    <svg width="240" height="240" style="position:absolute;top:-20px;right:-20px;pointer-events:none;opacity:0.18" aria-hidden="true">
+      <circle cx="240" cy="0" r="200" fill="none" stroke="#84e7a5" stroke-width="1.5"/>
+      <circle cx="240" cy="0" r="140" fill="none" stroke="#84e7a5" stroke-width="1"/>
+      <circle cx="240" cy="0" r="80"  fill="none" stroke="#84e7a5" stroke-width="0.8"/>
+      <circle cx="205" cy="65"  r="6" fill="#84e7a5"/>
+      <circle cx="162" cy="116" r="4" fill="#84e7a5"/>
+      <circle cx="108" cy="150" r="3" fill="#84e7a5"/>
+    </svg>
+    <span class="label">Everything you need for data</span>
+    <h2>Six pillars that unlock<br><span style="color:var(--matcha-300)">data careers</span></h2>
+    <div class="pillars-grid" data-stagger>
+      <div class="pillar-card reveal-child"><div class="pillar-icon">🏫</div><div class="pillar-title">Data-specific curriculum</div><p class="pillar-desc">SQL, Python, analytics tools, and real data workflows from instructors at top universities and leading data-focused companies. Not generic tech training.</p></div>
+      <div class="pillar-card reveal-child"><div class="pillar-icon">👥</div><div class="pillar-title">Data community cohort</div><p class="pillar-desc">Cohorts of 15-25 peers pivoting to data together. Near-peer mentors who've made the jump to analytics/engineering roles. Shared struggle builds lasting connections.</p></div>
+      <div class="pillar-card reveal-child"><div class="pillar-icon">💰</div><div class="pillar-title">Financial pathways</div><p class="pillar-desc">Income Share Agreements, scholarships, and government-backed options. No upfront costs shouldn't stop you from breaking into data careers.</p></div>
+      <div class="pillar-card reveal-child"><div class="pillar-icon">🎯</div><div class="pillar-title">Real data projects</div><p class="pillar-desc">Build actual analytics dashboards and data pipelines. Your portfolio becomes proof you can do the work. 3+ projects to show hiring managers.</p></div>
+      <div class="pillar-card reveal-child"><div class="pillar-icon">🔒</div><div class="pillar-title">Beginner-safe space</div><p class="pillar-desc">Zero assumption of prior technical knowledge. Confusion is expected. Designed so non-technical backgrounds can genuinely thrive in data roles.</p></div>
+      <div class="pillar-card reveal-child"><div class="pillar-icon">⏱</div><div class="pillar-title">Flexible + intensive</div><p class="pillar-desc">8 weeks to job-ready without abandoning your current job or life. Learn data skills around your schedule. Bootcamp rigor, flexible format.</p></div>
     </div>
   </div>
 </div>
@@ -712,53 +203,57 @@ h1 { animation: fadeUp 0.5s ease 0.2s both; }
 <!-- PERSONAS -->
 <section id="who" class="personas-section">
   <span class="label">Who belongs here</span>
-  <h2>Built for people the<br>system left behind</h2>
-  <div class="persona-grid">
-    <div class="persona-card">
+  <h2>If you want to pivot<br>to data careers</h2>
+  <div class="persona-grid" data-stagger>
+    <div class="persona-card reveal-child">
       <div class="persona-header">
         <div class="persona-avatar pa-y">A</div>
         <div class="persona-name">Ashley, 34</div>
-        <div class="persona-role">Literature grad &middot; Single parent</div>
+        <div class="persona-role">Literature grad • Single parent</div>
       </div>
       <div class="persona-body">
-        <p class="persona-quote">"I knew data was the move. I just couldn't find a course that didn't assume I already knew how to code, and I couldn't afford to get it wrong again."</p>
-        <div class="ptags"><span class="ptag">Career changer</span><span class="ptag">Non-technical</span><span class="ptag">Time-constrained</span></div>
+        <p class="persona-quote">"I could see data was the move, stable, well-paid, in-demand. But every course assumed I knew Python. I needed someone to teach me from zero, without judgment."</p>
+        <div class="ptags"><span class="ptag">Non-technical background</span><span class="ptag">Career changer</span><span class="ptag">Time-constrained</span></div>
       </div>
     </div>
-    <div class="persona-card">
+    <div class="persona-card reveal-child">
       <div class="persona-header">
         <div class="persona-avatar pa-g">M</div>
         <div class="persona-name">Marcus, 28</div>
-        <div class="persona-role">Retail manager &middot; Regional NSW</div>
+        <div class="persona-role">Retail manager • Regional VIC</div>
       </div>
       <div class="persona-body">
-        <p class="persona-quote">"I've always wanted to move into tech but had no idea which path made sense for someone without a degree. I needed someone to show me the map."</p>
-        <div class="ptags"><span class="ptag">No degree</span><span class="ptag">Regional Australia</span><span class="ptag">First-gen professional</span></div>
+        <p class="persona-quote">"I wanted to break into data but wasn't sure if analyst, engineer, or scientist was right. I needed a roadmap that matched my actual background, not a generic bootcamp."</p>
+        <div class="ptags"><span class="ptag">No tech degree</span><span class="ptag">Exploring roles</span><span class="ptag">First-gen professional</span></div>
       </div>
     </div>
-    <div class="persona-card">
+    <div class="persona-card reveal-child">
       <div class="persona-header">
         <div class="persona-avatar pa-b">S</div>
         <div class="persona-name">Sunita, 41</div>
-        <div class="persona-role">Teacher &middot; Returning from career break</div>
+        <div class="persona-role">Teacher • Returning after break</div>
       </div>
       <div class="persona-body">
-        <p class="persona-quote">"Teaching gave me skills employers need. I just needed someone to show them those skills translate to a completely new field."</p>
-        <div class="ptags"><span class="ptag">Career relaunch</span><span class="ptag">Transferable skills</span><span class="ptag">Financial support needed</span></div>
+        <p class="persona-quote">"I had analytical skills from teaching but no data credentials. I needed proof, a portfolio, that I could do data work, and support finding data roles that valued my background."</p>
+        <div class="ptags"><span class="ptag">Analytical mindset</span><span class="ptag">Transferable skills</span><span class="ptag">Portfolio building</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PARTNERS -->
-<div class="partners-strip">
+<div class="partners-strip reveal">
   <span class="label">Backed by credible Australian organisations</span>
   <div class="partners-row">
-    <span class="partner-tag">University of Melbourne</span>
-    <span class="partner-tag">AURIN</span>
-    <span class="partner-tag">TAFE NSW</span>
-    <span class="partner-tag">Jobs &amp; Skills Australia</span>
-    <span class="partner-tag">Industry Advisory Board</span>
+    <div class="partner-logo" title="University of Melbourne">
+      <img src="logos/uom-logo.jpg" alt="University of Melbourne" width="200px">
+    </div>
+    <div class="partner-logo" title="AURIN">
+      <img src="logos/aurin-logo.png" alt="AURIN" width="200px">
+    </div>
+    <div class="partner-logo" title="TAFE VIC">
+      <img src="logos/tafe-vic-black-logo.png" alt="TAFE VIC" width="200px">
+    </div>
   </div>
 </div>
 
@@ -770,14 +265,14 @@ h1 { animation: fadeUp 0.5s ease 0.2s both; }
     <div class="fin-layout">
       <div>
         <p class="fin-lead">Access to quality career education shouldn't depend on who can afford to pay upfront. PivotLab has built multiple financial pathways so cost is never the deciding factor.</p>
-        <div class="fin-options">
-          <div class="fin-option"><div class="fin-icon">&#128200;</div><div><div class="fin-title">Income Share Agreement</div><div class="fin-desc">Pay nothing upfront. A small income share begins only after you land a job above the threshold.</div></div></div>
-          <div class="fin-option"><div class="fin-icon">&#127941;</div><div><div class="fin-title">Cohort scholarships</div><div class="fin-desc">Needs-based and merit scholarships available in every cohort, prioritising underrepresented career changers.</div></div></div>
-          <div class="fin-option"><div class="fin-icon">&#127982;</div><div><div class="fin-title">Government-aligned funding</div><div class="fin-desc">We align with Australian Skills programs so eligible learners can access existing government support.</div></div></div>
-          <div class="fin-option"><div class="fin-icon">&#128179;</div><div><div class="fin-title">Flexible payment plans</div><div class="fin-desc">Spread payments across your cohort timeline with zero interest.</div></div></div>
+        <div class="fin-options" data-stagger>
+          <div class="fin-option reveal-child"><div class="fin-icon">&#128200;</div><div><div class="fin-title">Income Share Agreement</div><div class="fin-desc">Pay nothing upfront. A small income share begins only after you land a job above the threshold.</div></div></div>
+          <div class="fin-option reveal-child"><div class="fin-icon">&#127941;</div><div><div class="fin-title">Cohort scholarships</div><div class="fin-desc">Needs-based and merit scholarships available in every cohort, prioritising underrepresented career changers.</div></div></div>
+          <div class="fin-option reveal-child"><div class="fin-icon">&#127982;</div><div><div class="fin-title">Government-aligned funding</div><div class="fin-desc">We align with Australian Skills programs so eligible learners can access existing government support.</div></div></div>
+          <div class="fin-option reveal-child"><div class="fin-icon">&#128179;</div><div><div class="fin-title">Flexible payment plans</div><div class="fin-desc">Spread payments across your cohort timeline with zero interest.</div></div></div>
         </div>
       </div>
-      <div class="fin-card">
+      <div class="fin-card reveal-scale">
         <p class="fin-card-title">Typical bootcamp vs PivotLab</p>
         <div class="cost-row"><span class="cost-item">Typical upfront bootcamp</span><span class="cost-val strike">$8,500</span></div>
         <div class="cost-row"><span class="cost-item">PivotLab upfront (ISA path)</span><span class="cost-val good">$0</span></div>
@@ -798,18 +293,18 @@ h1 { animation: fadeUp 0.5s ease 0.2s both; }
 <section class="testi-section">
   <span class="label">From our community</span>
   <h2>Hear from people who<br>made the leap</h2>
-  <div class="testi-grid">
-    <div class="testi-card">
+  <div class="testi-grid" data-stagger>
+    <div class="testi-card reveal-child">
       <div class="testi-mark">"</div>
       <p class="testi-text">I tried two other platforms and failed both times. PivotLab was the first place that felt like it was actually designed for someone from outside tech. The cohort alone was worth every moment.</p>
       <div class="testi-person"><div class="testi-avatar ta-y">JL</div><div><div class="testi-name">Jess L.</div><div class="testi-role">Former nurse &rarr; Data Analyst</div></div></div>
     </div>
-    <div class="testi-card">
+    <div class="testi-card reveal-child">
       <div class="testi-mark">"</div>
       <p class="testi-text">The university backing gave me trust I've never had in a bootcamp. My employer actually commented on my portfolio quality at the interview. That's the credential difference.</p>
       <div class="testi-person"><div class="testi-avatar ta-g">DK</div><div><div class="testi-name">David K.</div><div class="testi-role">Former teacher &rarr; Business Analyst</div></div></div>
     </div>
-    <div class="testi-card">
+    <div class="testi-card reveal-child">
       <div class="testi-mark">"</div>
       <p class="testi-text">The ISA meant I could commit without gambling my savings. I only started paying once I had income that made sense. That model changed everything for my family.</p>
       <div class="testi-person"><div class="testi-avatar ta-b">PR</div><div><div class="testi-name">Priya R.</div><div class="testi-role">Former marketing exec &rarr; Data Engineer</div></div></div>
@@ -819,7 +314,14 @@ h1 { animation: fadeUp 0.5s ease 0.2s both; }
 
 <!-- CTA -->
 <div id="cta" class="cta-wrap">
-  <div class="cta-section">
+  <div class="cta-section reveal">
+    <!-- radial sunburst -->
+    <svg class="cta-svg-bg" width="640" height="640" viewBox="0 0 640 640" aria-hidden="true">
+      <circle cx="320" cy="320" r="80"  fill="none" stroke="#3bd3fd" stroke-width="1"/>
+      <circle cx="320" cy="320" r="160" fill="none" stroke="#3bd3fd" stroke-width="1"/>
+      <circle cx="320" cy="320" r="250" fill="none" stroke="#3bd3fd" stroke-width="0.8"/>
+      <circle cx="320" cy="320" r="310" fill="none" stroke="#3bd3fd" stroke-width="0.5"/>
+    </svg>
     <span class="label">Ready?</span>
     <h2>Your pivot starts with<br>one <span style="color:var(--slushie-500)">application</span></h2>
     <p class="cta-sub">Join the next cohort. Credible educators, a community who gets it, and financial pathways that remove every remaining excuse.</p>
@@ -857,5 +359,6 @@ h1 { animation: fadeUp 0.5s ease 0.2s both; }
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
