@@ -188,7 +188,7 @@ h1 {
   max-width: 520px; line-height: 1.6; margin-bottom: 56px;
 }
 
-.problem-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.problem-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
 
 .problem-card {
   background: rgba(255,255,255,0.05);
