@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PivotLab — Launch your data career</title>
+<title>PivotLab. Launch your data career.</title>
 <meta name="description" content="PivotLab helps career changers transition into data roles with credible educators, real project portfolios, and financial pathways that remove every barrier.">
-<meta name="theme-color" content="#0E0E10">
+<meta name="theme-color" content="#F8F5EF">
 
 <!-- Open Graph -->
 <meta property="og:type"        content="website">
-<meta property="og:title"       content="PivotLab — Launch your data career">
+<meta property="og:title"       content="PivotLab. Launch your data career.">
 <meta property="og:description" content="Transition into high-demand data roles. Credible educators, real portfolios, income share options. No excuses left.">
 <meta property="og:url"         content="https://pivotlab.com.au">
 <meta property="og:image"       content="https://pivotlab.com.au/logos/og-image.png">
@@ -18,10 +18,10 @@
 <link rel="icon" type="image/svg+xml" href="logos/pivotlab-favicon.svg">
 <link rel="apple-touch-icon" href="logos/apple-touch-icon.png">
 
-<!-- Fonts: Inter 400 + 500 only -->
+<!-- Fonts: Fraunces (display serif) + Inter (body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -36,12 +36,12 @@
     <li><a href="#how">How it works</a></li>
     <li><a href="#pillars">What we offer</a></li>
     <li><a href="#who">Who it's for</a></li>
-    <li><a href="#finance">Funding</a></li>
+    <!-- <li><a href="#finance">Funding</a></li> -->  <!-- hidden while Financial section is commented out -->
   </ul>
   <a href="#" class="nav-cta" onclick="openEOI();return false;">Expression of interest &rarr;</a>
 </nav>
 
-<!-- HERO — Option B: headline left, prism + rays right -->
+<!-- HERO: headline left, prism + spectrum right -->
 <section class="hero">
   <div class="hero-inner">
 
@@ -72,42 +72,171 @@
       </div>
     </div><!-- /.hero-left -->
 
-    <!-- Prism mark + diverging-ray motif -->
+    <!-- Prism scene: a wireframe crystal that refracts a single beam into a brilliant rainbow -->
     <div class="hero-visual">
-      <svg class="hero-prism-svg" viewBox="100 40 640 440" xmlns="http://www.w3.org/2000/svg"
-           role="img" aria-label="The PivotLab prism — one input, many bright career pathways">
-        <title>PivotLab prism</title>
-        <desc>A triangular prism with diverging rays to the right, representing career transformation.</desc>
+      <svg class="hero-prism-svg" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"
+           role="img" aria-label="A minimalist gold-wire crystal prism refracts a single beam of warm light into a brilliant rainbow with glowing sparkles, symbolising how PivotLab reveals the full spectrum hidden within a career background.">
+        <title>The PivotLab prism</title>
 
-        <!-- Subtle filled refraction zone -->
-        <polygon points="465,130 340,365 720,450 720,48"
-          fill="#2E6F6A" fill-opacity="0.04" stroke="none"/>
+        <defs>
+          <radialGradient id="hp-ambient" cx="52%" cy="50%" r="60%">
+            <stop offset="0%"  stop-color="#EBDCA8" stop-opacity="0.42"/>
+            <stop offset="55%" stop-color="#EBDCA8" stop-opacity="0.08"/>
+            <stop offset="100%" stop-color="#EBDCA8" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="hp-beam-in" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"  stop-color="#FFFCF7" stop-opacity="0"/>
+            <stop offset="60%" stop-color="#FFF3D6" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#FFFDF5" stop-opacity="1"/>
+          </linearGradient>
+          <linearGradient id="hp-prism-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%"   stop-color="#FFFCF7" stop-opacity="0.14"/>
+            <stop offset="100%" stop-color="#EBDCA8" stop-opacity="0.06"/>
+          </linearGradient>
+          <linearGradient id="hp-edge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%"   stop-color="#EBDCA8"/>
+            <stop offset="50%"  stop-color="#C9A227"/>
+            <stop offset="100%" stop-color="#A67C52"/>
+          </linearGradient>
+          <radialGradient id="hp-point-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#FFFDF5" stop-opacity="1"/>
+            <stop offset="55%"  stop-color="#FFF3D6" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#FFFDF5" stop-opacity="0"/>
+          </radialGradient>
+          <!-- Rainbow band gradients: luxurious spectrum from cool to warm -->
+          <linearGradient id="rb-grad-1" x1="0" x2="1"><stop offset="0%" stop-color="#B294DB" stop-opacity="0.95"/><stop offset="100%" stop-color="#B294DB" stop-opacity="0"/></linearGradient>
+          <linearGradient id="rb-grad-2" x1="0" x2="1"><stop offset="0%" stop-color="#7BA7E1" stop-opacity="0.95"/><stop offset="100%" stop-color="#7BA7E1" stop-opacity="0"/></linearGradient>
+          <linearGradient id="rb-grad-3" x1="0" x2="1"><stop offset="0%" stop-color="#7BCDBA" stop-opacity="0.95"/><stop offset="100%" stop-color="#7BCDBA" stop-opacity="0"/></linearGradient>
+          <linearGradient id="rb-grad-4" x1="0" x2="1"><stop offset="0%" stop-color="#A8D89A" stop-opacity="0.95"/><stop offset="100%" stop-color="#A8D89A" stop-opacity="0"/></linearGradient>
+          <linearGradient id="rb-grad-5" x1="0" x2="1"><stop offset="0%" stop-color="#EBCB6E" stop-opacity="0.95"/><stop offset="100%" stop-color="#EBCB6E" stop-opacity="0"/></linearGradient>
+          <linearGradient id="rb-grad-6" x1="0" x2="1"><stop offset="0%" stop-color="#E5A470" stop-opacity="0.95"/><stop offset="100%" stop-color="#E5A470" stop-opacity="0"/></linearGradient>
+          <linearGradient id="rb-grad-7" x1="0" x2="1"><stop offset="0%" stop-color="#D77E71" stop-opacity="0.95"/><stop offset="100%" stop-color="#D77E71" stop-opacity="0"/></linearGradient>
+          <!-- Filters -->
+          <filter id="hp-bloom" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="4" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="hp-rainbow-bloom" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="2.4" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="hp-sparkle" x="-200%" y="-200%" width="500%" height="500%">
+            <feGaussianBlur stdDeviation="1.4" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="hp-edge-glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="1.2" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
 
-        <!-- Diverging rays from the right face (accent colour, fading outward) -->
-        <line x1="465" y1="130" x2="720" y2="48"  stroke="#2E6F6A" stroke-width="0.75" stroke-opacity="0.22"/>
-        <line x1="434" y1="189" x2="720" y2="158" stroke="#2E6F6A" stroke-width="1"    stroke-opacity="0.38"/>
-        <line x1="402" y1="248" x2="720" y2="250" stroke="#2E6F6A" stroke-width="1"    stroke-opacity="0.52"/>
-        <line x1="371" y1="307" x2="720" y2="342" stroke="#2E6F6A" stroke-width="1"    stroke-opacity="0.38"/>
-        <line x1="340" y1="365" x2="720" y2="450" stroke="#2E6F6A" stroke-width="0.75" stroke-opacity="0.22"/>
+        <!-- Ambient warm halo -->
+        <rect x="0" y="0" width="640" height="480" fill="url(#hp-ambient)"/>
 
-        <!-- Dashed back-face (hidden edges) -->
-        <path d="M 250 95 L 345 95"   fill="none" stroke="#0E0E10" stroke-width="2" stroke-linecap="square" stroke-dasharray="6 6" opacity="0.45"/>
-        <path d="M 405 95 L 500 95"   fill="none" stroke="#0E0E10" stroke-width="2" stroke-linecap="square" stroke-dasharray="6 6" opacity="0.45"/>
-        <path d="M 250 95 L 283 160"  fill="none" stroke="#0E0E10" stroke-width="2" stroke-linecap="square" stroke-dasharray="6 6" opacity="0.45"/>
-        <path d="M 320 233 L 370 330" fill="none" stroke="#0E0E10" stroke-width="2" stroke-linecap="square" stroke-dasharray="6 6" opacity="0.45"/>
-        <path d="M 500 95 L 467 160"  fill="none" stroke="#0E0E10" stroke-width="2" stroke-linecap="square" stroke-dasharray="6 6" opacity="0.45"/>
-        <path d="M 430 233 L 380 330" fill="none" stroke="#0E0E10" stroke-width="2" stroke-linecap="square" stroke-dasharray="6 6" opacity="0.45"/>
-        <line x1="250" y1="95"  x2="215" y2="130" stroke="#0E0E10" stroke-width="2" stroke-linecap="square" stroke-dasharray="6 6" opacity="0.45"/>
-        <line x1="500" y1="95"  x2="465" y2="130" stroke="#0E0E10" stroke-width="2" stroke-linecap="square" stroke-dasharray="6 6" opacity="0.45"/>
-        <line x1="375" y1="330" x2="340" y2="365" stroke="#0E0E10" stroke-width="2" stroke-linecap="square" stroke-dasharray="6 6" opacity="0.45"/>
+        <!-- Faint ambient rays fanning behind the prism -->
+        <g class="prism-ambient-rays" stroke="#A67C52" stroke-width="1" opacity="0.07">
+          <line x1="330" y1="235" x2="640" y2="30"/>
+          <line x1="330" y1="235" x2="640" y2="95"/>
+          <line x1="330" y1="235" x2="640" y2="155"/>
+          <line x1="330" y1="235" x2="640" y2="215"/>
+          <line x1="330" y1="235" x2="640" y2="275"/>
+          <line x1="330" y1="235" x2="640" y2="335"/>
+          <line x1="330" y1="235" x2="640" y2="395"/>
+          <line x1="330" y1="235" x2="640" y2="455"/>
+        </g>
 
-        <!-- Solid front face -->
-        <path d="M 215 130 L 310 130" fill="none" stroke="#0E0E10" stroke-width="2.5" stroke-linecap="square"/>
-        <path d="M 370 130 L 465 130" fill="none" stroke="#0E0E10" stroke-width="2.5" stroke-linecap="square"/>
-        <path d="M 215 130 L 248 195" fill="none" stroke="#0E0E10" stroke-width="2.5" stroke-linecap="square"/>
-        <path d="M 285 268 L 340 365" fill="none" stroke="#0E0E10" stroke-width="2.5" stroke-linecap="square"/>
-        <path d="M 465 130 L 432 195" fill="none" stroke="#0E0E10" stroke-width="2.5" stroke-linecap="square"/>
-        <path d="M 395 268 L 340 365" fill="none" stroke="#0E0E10" stroke-width="2.5" stroke-linecap="square"/>
+        <!-- Incoming warm beam -->
+        <rect class="prism-beam-in" x="0" y="226" width="292" height="9" fill="url(#hp-beam-in)" rx="4.5"/>
+
+        <!-- Entry glow where the beam meets the left face -->
+        <g class="prism-entry" filter="url(#hp-bloom)">
+          <circle class="prism-entry-glow" cx="285" cy="230" r="18" fill="url(#hp-point-glow)"/>
+          <circle cx="285" cy="230" r="2.6" fill="#FFFDF5" opacity="0.95"/>
+        </g>
+
+        <!-- The animated scene: everything that drifts and rotates as a unit -->
+        <g class="prism-scene">
+
+          <!-- Semi-transparent crystal glass fill -->
+          <polygon class="prism-glass" points="240,130 420,130 330,330" fill="url(#hp-prism-glass)"/>
+
+          <!-- Internal caustic patches (soft light patches inside the crystal) -->
+          <g class="prism-caustics">
+            <ellipse class="caustic caustic-1" cx="292" cy="200" rx="20" ry="7" fill="#FFFCF7" opacity="0.18" transform="rotate(-24 292 200)"/>
+            <ellipse class="caustic caustic-2" cx="368" cy="270" rx="16" ry="6" fill="#F0DFA6" opacity="0.22" transform="rotate(28 368 270)"/>
+            <ellipse class="caustic caustic-3" cx="332" cy="175" rx="12" ry="4" fill="#FFFCF7" opacity="0.16" transform="rotate(6 332 175)"/>
+          </g>
+
+          <!-- Internal refraction point: where the rainbow is born -->
+          <g class="prism-refraction" filter="url(#hp-bloom)">
+            <circle class="refraction-halo" cx="330" cy="235" r="22" fill="url(#hp-point-glow)" opacity="0.6"/>
+            <circle cx="330" cy="235" r="6" fill="#FFFDF5" opacity="0.9"/>
+            <circle cx="330" cy="235" r="2.2" fill="#FFFFFF"/>
+          </g>
+
+          <!-- Rainbow bands: originate INSIDE the prism, fan out to the right -->
+          <g class="prism-rainbow" filter="url(#hp-rainbow-bloom)">
+            <polygon class="rb-band rb-1" points="328,233 640,50  640,80  332,237" fill="url(#rb-grad-1)"/>
+            <polygon class="rb-band rb-2" points="328,233 640,108 640,138 332,237" fill="url(#rb-grad-2)"/>
+            <polygon class="rb-band rb-3" points="328,233 640,166 640,196 332,237" fill="url(#rb-grad-3)"/>
+            <polygon class="rb-band rb-4" points="328,233 640,224 640,254 332,237" fill="url(#rb-grad-4)"/>
+            <polygon class="rb-band rb-5" points="328,233 640,282 640,312 332,237" fill="url(#rb-grad-5)"/>
+            <polygon class="rb-band rb-6" points="328,233 640,340 640,370 332,237" fill="url(#rb-grad-6)"/>
+            <polygon class="rb-band rb-7" points="328,233 640,398 640,428 332,237" fill="url(#rb-grad-7)"/>
+          </g>
+
+          <!-- Sparkle particles floating along the rainbow -->
+          <g class="prism-sparkles" filter="url(#hp-sparkle)">
+            <circle class="sparkle sparkle-1"  cx="390" cy="200" r="1.6" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-2"  cx="446" cy="168" r="1.3" fill="#FFF3D6"/>
+            <circle class="sparkle sparkle-3"  cx="486" cy="132" r="1.8" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-4"  cx="536" cy="102" r="1.4" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-5"  cx="588" cy="86"  r="1.7" fill="#FFF3D6"/>
+            <circle class="sparkle sparkle-6"  cx="416" cy="228" r="1.2" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-7"  cx="472" cy="235" r="1.8" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-8"  cx="522" cy="230" r="1.5" fill="#FFF3D6"/>
+            <circle class="sparkle sparkle-9"  cx="588" cy="238" r="1.9" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-10" cx="405" cy="270" r="1.3" fill="#FFF3D6"/>
+            <circle class="sparkle sparkle-11" cx="470" cy="298" r="1.7" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-12" cx="536" cy="332" r="1.4" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-13" cx="590" cy="372" r="1.6" fill="#FFF3D6"/>
+            <circle class="sparkle sparkle-14" cx="426" cy="196" r="1.1" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-15" cx="502" cy="196" r="1.3" fill="#FFF3D6"/>
+            <circle class="sparkle sparkle-16" cx="608" cy="180" r="1.5" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-17" cx="452" cy="345" r="1.6" fill="#FFFCF7"/>
+            <circle class="sparkle sparkle-18" cx="516" cy="400" r="1.4" fill="#FFF3D6"/>
+          </g>
+
+          <!-- Gold wireframe (drawn on top for crisp definition) -->
+          <g class="prism-wireframe">
+            <!-- Base outline stroke, low-key gold -->
+            <polygon class="prism-outline-base" points="240,130 420,130 330,330"
+                     fill="none"
+                     stroke="url(#hp-edge-grad)"
+                     stroke-width="1.1"
+                     stroke-linejoin="round"
+                     stroke-linecap="round"/>
+            <!-- Bright shimmer overlay: a short dash travels around the outline -->
+            <polygon class="prism-outline-shimmer" points="240,130 420,130 330,330"
+                     fill="none"
+                     stroke="#FFF3D6"
+                     stroke-width="1.6"
+                     stroke-linejoin="round"
+                     stroke-linecap="round"
+                     stroke-dasharray="24 620"
+                     filter="url(#hp-edge-glow)"/>
+
+            <!-- Vertex glow rings (pulsing) -->
+            <circle class="vertex-glow vertex-glow-1" cx="240" cy="130" r="6" fill="none" stroke="#EBDCA8" stroke-width="0.7" opacity="0.55"/>
+            <circle class="vertex-glow vertex-glow-2" cx="420" cy="130" r="6" fill="none" stroke="#EBDCA8" stroke-width="0.7" opacity="0.55"/>
+            <circle class="vertex-glow vertex-glow-3" cx="330" cy="330" r="6" fill="none" stroke="#EBDCA8" stroke-width="0.7" opacity="0.55"/>
+
+            <!-- Vertex dots -->
+            <circle class="vertex vertex-1" cx="240" cy="130" r="2.6" fill="#C9A227"/>
+            <circle class="vertex vertex-2" cx="420" cy="130" r="2.6" fill="#C9A227"/>
+            <circle class="vertex vertex-3" cx="330" cy="330" r="2.6" fill="#C9A227"/>
+          </g>
+        </g>
       </svg>
     </div><!-- /.hero-visual -->
 
@@ -203,7 +332,7 @@
       <div class="step-num-col"><span class="step-num-label">03</span><div class="step-pip"></div></div>
       <div>
         <div class="step-title">Build your portfolio</div>
-        <p class="step-desc">Create real analytics projects and dashboards that show you can handle data work. Your portfolio becomes your proof. Three or more projects that hiring managers can assess — the difference between theory and demonstrable skill.</p>
+        <p class="step-desc">Create real analytics projects and dashboards that show you can handle data work. Your portfolio becomes your proof. Three or more projects that hiring managers can assess. The difference between theory and demonstrable skill.</p>
         <div class="chips"><span class="chip">Real datasets</span><span class="chip">Portfolio projects</span><span class="chip">Peer review</span></div>
       </div>
     </div>
@@ -224,12 +353,76 @@
     <span class="label">Everything you need for data</span>
     <h2>Six pillars that unlock<br>data careers</h2>
     <div class="pillars-grid" data-stagger>
-      <div class="pillar-card reveal-child"><div class="pillar-icon">&#127979;</div><div class="pillar-title">Data-specific curriculum</div><p class="pillar-desc">SQL, Python, analytics tools, and real data workflows from instructors at top universities and leading data-focused companies. Not generic tech training.</p></div>
-      <div class="pillar-card reveal-child"><div class="pillar-icon">&#128101;</div><div class="pillar-title">Data community cohort</div><p class="pillar-desc">Cohorts of 15&ndash;25 peers pivoting to data together. Near-peer mentors who've made the jump. Shared struggle builds lasting connections.</p></div>
-      <div class="pillar-card reveal-child"><div class="pillar-icon">&#128176;</div><div class="pillar-title">Financial pathways</div><p class="pillar-desc">Income share agreements, scholarships, and government-backed options. Upfront cost should never be the deciding factor.</p></div>
-      <div class="pillar-card reveal-child"><div class="pillar-icon">&#127919;</div><div class="pillar-title">Real data projects</div><p class="pillar-desc">Build actual analytics dashboards and data pipelines. Your portfolio becomes proof you can do the work. Three or more projects for hiring managers.</p></div>
-      <div class="pillar-card reveal-child"><div class="pillar-icon">&#128274;</div><div class="pillar-title">Someone to ask</div><p class="pillar-desc">Zero assumption of prior knowledge. When you hit a wall, there's a mentor who says "ignore that for now" &mdash; not silence. Confusion is expected and supported.</p></div>
-      <div class="pillar-card reveal-child"><div class="pillar-icon">&#9201;</div><div class="pillar-title">Flexible + intensive</div><p class="pillar-desc">16 weeks to job-ready without abandoning your current job or life. Bootcamp rigour, flexible format.</p></div>
+      <div class="pillar-card reveal-child">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 9 L12 5 L22 9 L12 13 Z"/>
+            <path d="M6 11 V16 C6 17.3 8.5 18.2 12 18.2 C15.5 18.2 18 17.3 18 16 V11"/>
+            <path d="M22 9 V15"/>
+          </svg>
+        </div>
+        <div class="pillar-title">Data-specific curriculum</div>
+        <p class="pillar-desc">SQL, Python, analytics tools, and real data workflows from instructors at top universities and leading data-focused companies. Not generic tech training.</p>
+      </div>
+      <div class="pillar-card reveal-child">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="6" r="2.6"/>
+            <circle cx="5"  cy="17" r="2.6"/>
+            <circle cx="19" cy="17" r="2.6"/>
+            <path d="M9.9 7.9 L7.1 14.7"/>
+            <path d="M14.1 7.9 L16.9 14.7"/>
+            <path d="M7.9 17.4 H16.1"/>
+          </svg>
+        </div>
+        <div class="pillar-title">Data community cohort</div>
+        <p class="pillar-desc">Cohorts of 15 to 25 peers pivoting to data together. Near-peer mentors who've made the jump. Shared struggle builds lasting connections.</p>
+      </div>
+      <div class="pillar-card reveal-child">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="8"/>
+            <path d="M12 7 V17"/>
+            <path d="M9 10 C9 8.5 10.3 8 12 8 C13.7 8 15 8.5 15 10 C15 11.5 13.7 12 12 12 C10.3 12 9 12.5 9 14 C9 15.5 10.3 16 12 16 C13.7 16 15 15.5 15 14"/>
+          </svg>
+        </div>
+        <div class="pillar-title">Financial pathways</div>
+        <p class="pillar-desc">Income share agreements, scholarships, and government-backed options. Upfront cost should never be the deciding factor.</p>
+      </div>
+      <div class="pillar-card reveal-child">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 20 H21"/>
+            <path d="M3 16 L8 11 L11 14 L16 7 L21 11"/>
+            <circle cx="16" cy="7" r="1.4" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div class="pillar-title">Real data projects</div>
+        <p class="pillar-desc">Build actual analytics dashboards and data pipelines. Your portfolio becomes proof you can do the work. Three or more projects for hiring managers.</p>
+      </div>
+      <div class="pillar-card reveal-child">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 5 H20 A2 2 0 0 1 22 7 V15 A2 2 0 0 1 20 17 H13 L8.5 20.5 V17 H4 A2 2 0 0 1 2 15 V7 A2 2 0 0 1 4 5 Z"/>
+            <path d="M10 10 A2 2 0 1 1 12 13 V13.5"/>
+            <circle cx="12" cy="16" r="0.6" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div class="pillar-title">Someone to ask</div>
+        <p class="pillar-desc">Zero assumption of prior knowledge. When you hit a wall, there's a mentor who says "ignore that for now," not silence. Confusion is expected and supported.</p>
+      </div>
+      <div class="pillar-card reveal-child">
+        <div class="pillar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3 H18"/>
+            <path d="M6 21 H18"/>
+            <path d="M7 3 V6.5 C7 9.5 12 11 12 12 C12 13 7 14.5 7 17.5 V21"/>
+            <path d="M17 3 V6.5 C17 9.5 12 11 12 12 C12 13 17 14.5 17 17.5 V21"/>
+          </svg>
+        </div>
+        <div class="pillar-title">Flexible and intensive</div>
+        <p class="pillar-desc">16 weeks to job-ready without abandoning your current job or life. Bootcamp rigour, flexible format.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -246,7 +439,7 @@
         <div class="persona-role">Literature grad &bull; Single parent</div>
       </div>
       <div class="persona-body">
-        <p class="persona-quote">"I could see data was the move &mdash; stable, well-paid, in-demand. But every course assumed I knew Python. I needed someone to teach me from zero, without judgment."</p>
+        <p class="persona-quote">"I could see data was the move. Stable, well-paid, in-demand. But every course assumed I knew Python. I needed someone to teach me from zero, without judgment."</p>
         <div class="ptags"><span class="ptag">Non-technical background</span><span class="ptag">Career changer</span><span class="ptag">Time-constrained</span></div>
       </div>
     </div>
@@ -268,7 +461,7 @@
         <div class="persona-role">Teacher &bull; Returning after break</div>
       </div>
       <div class="persona-body">
-        <p class="persona-quote">"I had analytical skills from teaching but no data credentials. I needed proof &mdash; a portfolio &mdash; that I could do data work, and support finding roles that valued my background."</p>
+        <p class="persona-quote">"I had analytical skills from teaching but no data credentials. I needed proof, a portfolio, that I could do data work, and support finding roles that valued my background."</p>
         <div class="ptags"><span class="ptag">Analytical mindset</span><span class="ptag">Transferable skills</span><span class="ptag">Portfolio building</span></div>
       </div>
     </div>
@@ -286,7 +479,7 @@
 </div>
 -->
 
-<!-- FINANCIAL -->
+<!-- FINANCIAL: hidden for now, re-enable when financial pathways are ready to publish
 <div id="finance" class="financial-wrap">
   <div class="financial-section">
     <span class="label">Financial support</span>
@@ -295,10 +488,49 @@
       <div>
         <p class="fin-lead">Access to quality career education shouldn't depend on who can afford to pay upfront. PivotLab has built multiple financial pathways so cost is never the deciding factor.</p>
         <div class="fin-options" data-stagger>
-          <div class="fin-option reveal-child"><div class="fin-icon">&#128200;</div><div><div class="fin-title">Income share agreement</div><div class="fin-desc">Pay nothing upfront. A small income share begins only after you land a job above the threshold.</div></div></div>
-          <div class="fin-option reveal-child"><div class="fin-icon">&#127941;</div><div><div class="fin-title">Cohort scholarships</div><div class="fin-desc">Needs-based and merit scholarships available in every cohort, prioritising underrepresented career changers.</div></div></div>
-          <div class="fin-option reveal-child"><div class="fin-icon">&#127982;</div><div><div class="fin-title">Government-aligned funding</div><div class="fin-desc">We align with Australian Skills programs so eligible learners can access existing government support.</div></div></div>
-          <div class="fin-option reveal-child"><div class="fin-icon">&#128179;</div><div><div class="fin-title">Flexible payment plans</div><div class="fin-desc">Spread payments across your cohort timeline with zero interest.</div></div></div>
+          <div class="fin-option reveal-child">
+            <div class="fin-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 17 L9 11 L13 15 L21 6"/>
+                <path d="M15 6 H21 V12"/>
+              </svg>
+            </div>
+            <div><div class="fin-title">Income share agreement</div><div class="fin-desc">Pay nothing upfront. A small income share begins only after you land a job above the threshold.</div></div>
+          </div>
+          <div class="fin-option reveal-child">
+            <div class="fin-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="9" r="6"/>
+                <path d="M8 14 L6 21 L12 18 L18 21 L16 14"/>
+                <path d="M12 6 L13 8 L15 8.3 L13.5 9.7 L14 12 L12 10.8 L10 12 L10.5 9.7 L9 8.3 L11 8 Z" fill="currentColor" stroke="none" opacity="0.5"/>
+              </svg>
+            </div>
+            <div><div class="fin-title">Cohort scholarships</div><div class="fin-desc">Needs-based and merit scholarships available in every cohort, prioritising underrepresented career changers.</div></div>
+          </div>
+          <div class="fin-option reveal-child">
+            <div class="fin-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21 H21"/>
+                <path d="M4 21 V10"/>
+                <path d="M20 21 V10"/>
+                <path d="M8 21 V12"/>
+                <path d="M12 21 V12"/>
+                <path d="M16 21 V12"/>
+                <path d="M2 10 L12 4 L22 10 Z"/>
+              </svg>
+            </div>
+            <div><div class="fin-title">Government-aligned funding</div><div class="fin-desc">We align with Australian Skills programs so eligible learners can access existing government support.</div></div>
+          </div>
+          <div class="fin-option reveal-child">
+            <div class="fin-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2.5" y="5" width="19" height="14" rx="2"/>
+                <path d="M2.5 10 H21.5"/>
+                <path d="M6 15 H10"/>
+              </svg>
+            </div>
+            <div><div class="fin-title">Flexible payment plans</div><div class="fin-desc">Spread payments across your cohort timeline with zero interest.</div></div>
+          </div>
         </div>
       </div>
       <div class="fin-card reveal-scale">
@@ -317,6 +549,7 @@
     </div>
   </div>
 </div>
+-->
 
 <!-- EMPLOYER CTA -->
 <section class="employer-cta reveal">
@@ -366,6 +599,7 @@
           <img src="logos/pivotlab-logo.svg" alt="PivotLab" class="footer-logo-img">
         </div>
         <div class="footer-tagline">Australia's career pivot platform. Enabling everyone to access a better working life.</div>
+        <a href="mailto:hello@pivotlab.com.au" class="footer-email">hello@pivotlab.com.au</a>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
@@ -391,7 +625,7 @@
           <ul>
             <li><a href="#">About us</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="mailto:hello@pivotlab.com.au">Contact</a></li>
             <li><a href="#">pivotlab.com.au</a></li>
           </ul>
         </div>

@@ -10,7 +10,7 @@
   }, { passive: true });
 
   /* 2. SCROLL REVEAL */
-  var revealSelectors = '.reveal, .reveal-left, .reveal-scale';
+  var revealSelectors = '.reveal, .reveal-left, .reveal-scale, .reveal-mask';
 
   if (prefersReducedMotion) {
     document.querySelectorAll(revealSelectors + ', .reveal-child').forEach(function (el) {
@@ -103,17 +103,20 @@
     });
   }
 
-  /* 5. HERO PARALLAX — blob follows cursor subtly */
+  /* 5. HERO PARALLAX. The prism scene follows the cursor subtly. */
   if (!prefersReducedMotion && window.matchMedia('(hover: hover)').matches) {
-    var blob = document.querySelector('.hero-svg-bg');
-    if (blob) {
+    var prism = document.querySelector('.hero-prism-svg');
+    if (prism) {
       var rafId = null;
       document.addEventListener('mousemove', function (e) {
         if (rafId) return;
         rafId = requestAnimationFrame(function () {
-          var x = (e.clientX / window.innerWidth - 0.5) * 20;
-          var y = (e.clientY / window.innerHeight - 0.5) * 14;
-          blob.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+          var nx = e.clientX / window.innerWidth - 0.5;
+          var ny = e.clientY / window.innerHeight - 0.5;
+          var x = nx * 14;
+          var y = ny * 10;
+          var r = nx * 1.5;
+          prism.style.transform = 'translate(' + x + 'px, ' + y + 'px) rotate(' + r + 'deg)';
           rafId = null;
         });
       }, { passive: true });
